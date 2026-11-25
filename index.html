@@ -64,7 +64,10 @@ async function openInbox(){if(!isOwner){alert('Please sign in as the bookshelf o
 function closeModal(id){document.getElementById(id).classList.remove('show')}
 ['readModal','inboxModal','loginModal','draftsModal','stickerModal'].forEach(id=>document.getElementById(id).addEventListener('click',e=>{if(e.target.id===id)closeModal(id)}));document.getElementById('bookModal').addEventListener('click',e=>{if(e.target.id==='bookModal')closeDetails()});document.getElementById('writerModal').addEventListener('click',e=>{if(e.target.id==='writerModal')closeWriter()});
 if(dbClient)dbClient.auth.onAuthStateChange(()=>{setTimeout(()=>refreshData(),0)});refreshData();
+
+Object.assign(window,{addDivider,closeDetails,closeModal,closeWriter,formatText,newBook,openBook,openDrafts,openInbox,openStickerPicker,openWriter,pickSticker,publishDraft,removeDraft,saveDetailsDraft,sendComment,sendMessage,signIn,signOut,startWriting,toggleMode,toggleSuggestions});
 </script></body></html>
+
 
 
 
